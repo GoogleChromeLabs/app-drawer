@@ -1,9 +1,10 @@
 {
 	"name": "app-drawer",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Polyfill for the app-drawer Built-in Module",
 	"main": "dist/app-drawer-polyfill.js",
 	"module": "dist/app-drawer-polyfill.mjs",
+	"umd:main": "dist/app-drawer-polyfill.js",
 	"source": "polyfill/app-drawer.mjs",
 	"scripts": {
 		"build": "microbundle -f es,umd",
