@@ -14,14 +14,12 @@ This document is an explainer for a potential browser-provided "App Drawer" comp
 </app-drawer>
 
 <script type="module">
-  import '@std/app-drawer';
+  import 'std:app-drawer';
   drawer.addEventListener('close', () => {
     console.log('closed');
   });
   drawer.open();
 </script>
-
-<!-- Future:  <script type="module" src="import:@std/app-drawer"></script> -->
 ```
 
 ## Motivation
@@ -106,7 +104,7 @@ drawer.addEventListener('toggle', e => {
 
 ## Open issues and questions
 
-Please see [the issue tracker](https://github.com/developit/app-drawer/issues) for open issues on the API surface detailed above.
+Please see [the issue tracker](https://github.com/GoogleChromeLabs/app-drawer/issues) for open issues on the API surface detailed above.
 
 ## Impact
 
