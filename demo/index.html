@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>App Drawer Demo</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+		addEventListener('click', e => {
+			const a = e.target.closest('a');
+			if (a && a.origin === location.origin && /^(self|top|)$/.test(a.target || '')) {
+				e.preventDefault();
+				history.pushState(null, a.title, a.href);
+			}
+		});
+	</script>
+
+	<script type="module" src="app-drawer.mjs"></script>
+</head>
+<body>
+	<header id="demo-header">
+		<button onclick="drawer.toggle()">Toggle Drawer</button>
+		<h1>&lt;app-drawer&gt; Prototype</h1>
+	</header>
+	<p>
+		This is an early prototype of `app-drawer`.
+		Try pulling open the drawer open as if this was a native mobile app, or tap the hamburger icon.
+	</p>
+	<p>
+		The drawer is currently <code id="state">closed</code>.
+	</p>
+	<nav>
+		<a href="https://github.com/developit/app-drawer" target="_blank">View Source ↗️</a> on Github<br>
+		<a href="https://developit.github.io/app-drawer/" target="_blank">Full Screen Demo ↗️</a> (on a phone!)<br>
+	</nav>
+
+	<app-drawer id="drawer" autoclose ontoggle="state.textContent=event.open?'open':'closed'">
+		<header><h2>Hello</h2></header>
+		<nav>
+			<a href="/">Home</a> <a href="/products">Products</a> <a href="/about">About Us</a>
+			<a href="/who-we-are">Who We Are</a> <a href="/quality">Quality</a>
+			<a href="/contact">Contact Us</a>
+		</nav>
+	</app-drawer>
+</body>
+</html>

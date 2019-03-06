@@ -1,0 +1,49 @@
+{
+	"name": "app-drawer-polyfill",
+	"version": "1.0.0",
+	"description": "Polyfill for the app-drawer Built-in Module",
+	"main": "dist/app-drawer.js",
+	"module": "polyfill/app-drawer.mjs",
+	"scripts": {
+		"build": "microbundle polyfill/app-drawer.mjs -f umd",
+		"test": "karmatic"
+	},
+	"keywords": [
+		"app-drawer",
+		"polyfill"
+	],
+	"files": [
+		"polyfill",
+		"dist"
+	],
+	"eslintConfig": {
+		"extends": "standard",
+		"rules": {
+			"indent": [
+				2,
+				2
+			],
+			"semi": [
+				2,
+				"always"
+			]
+		},
+		"env": {
+			"browser": true
+		}
+	},
+	"author": "Jason Miller <developit@google.com>",
+	"license": "Apache-2.0",
+	"repository": "developit/app-drawer",
+	"devDependencies": {
+		"eslint": "^5.15.0",
+		"eslint-config-standard": "^12.0.0",
+		"eslint-plugin-import": "^2.16.0",
+		"eslint-plugin-node": "^8.0.1",
+		"eslint-plugin-promise": "^4.0.1",
+		"eslint-plugin-standard": "^4.0.0",
+		"karmatic": "^1.2.0",
+		"microbundle": "^0.10.1",
+		"webpack": "^4.29.6"
+	}
+}
