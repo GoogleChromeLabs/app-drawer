@@ -1,5 +1,5 @@
 {
-	"name": "app-drawer-polyfill",
+	"name": "app-drawer",
 	"version": "1.0.0",
 	"description": "Polyfill for the app-drawer Built-in Module",
 	"main": "dist/app-drawer-polyfill.js",
