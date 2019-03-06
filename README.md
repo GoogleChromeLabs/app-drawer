@@ -30,8 +30,6 @@ The concept of an "app drawer" is pervasive on the web. Also referred to as "off
 
 There are a multitude of drawer implementations in userland, many of which suffer from usability or performance issues. The inconsistency and unreliability of important UX characteristics like gestures & keyboard support has fractured web users' expectations of the metaphor, demonstrating the need for a browser-provided solution.
 
-(link to existing drawer impls?)
-
 We want to win back the trust of web users by bringing consistency, reliability and performance to drawer UI's.
 
 ---
@@ -47,7 +45,7 @@ By default, any elements placed into `<app-drawer>` are rendered within the slid
   <div slot="backdrop">Placed into the backdrop (grayed out) area</div>
 
   <div slot="header">Placed first in the drawer area</div>
-  
+
   <div>Any other children are placed into the drawer (after the header)</div>
 </app-drawer>
 ```
